@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Func() {
     let [myName, updatedName] = useState("Amira Atallah");
@@ -11,6 +11,24 @@ export default function Func() {
         setCount(Math.random() * 10);
 
     }
+
+    useEffect(() => {
+        console.log('====================================');
+        console.log("Use Effect Mount");
+        console.log('====================================');
+    }, [])
+    useEffect(() => {
+        console.log('====================================');
+        console.log("Use Effect update count");
+        console.log('====================================');
+    }, [count])
+
+    return useEffect(() => {
+        
+        console.log('====================================');
+        console.log("Use Effect Unmount");
+        console.log('====================================');
+    }, [])
     return <>
         <h1>Function Component</h1>
         <h3>{myName}</h3>
