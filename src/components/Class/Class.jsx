@@ -6,6 +6,24 @@ export default class Class extends Component {
     changeName = () => {
         this.setState({ myName: "Amira Reda" });
     }
+    
+    componentDidMount(){
+        console.log('====================================');
+        console.log("Component Mount");
+        console.log('====================================');
+    }
+    componentDidUpdate(){
+        console.log('====================================');
+        console.log("Component updated");
+        console.log('====================================');
+    }
+
+    componentWillUnmount(){
+        console.log('====================================');
+        console.log("Component Unmounted");
+        console.log('====================================');
+    }
+
     render() {
         return <>
             <h1>Class Component</h1>
